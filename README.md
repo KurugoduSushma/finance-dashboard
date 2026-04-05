@@ -1,5 +1,7 @@
 # Personal Finance Dashboard
 
+🚀 **Live Demo:** [https://finezdashboard.netlify.app](https://finezdashboard.netlify.app)
+
 ## 📊 Project Description
 The Personal Finance Dashboard is a high-fidelity, interactive web application designed to help users manage their financial data effectively. It features a modern, responsive UI with real-time summary cards, dynamic data visualizations for spending patterns, and a robust transaction management system.
 
