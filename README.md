@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# Personal Finance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📊 Project Description
+The Personal Finance Dashboard is a high-fidelity, interactive web application designed to help users manage their financial data effectively. It features a modern, responsive UI with real-time summary cards, dynamic data visualizations for spending patterns, and a robust transaction management system.
 
-Currently, two official plugins are available:
+The dashboard includes detailed tracking of transactions, visual budget alerts, and role-based access control simulations. It focuses on a highly polished, aesthetic user experience with functional reporting features to easily monitor one's financial health.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Technology Stack
+This project was built using modern web development technologies to ensure performance, type safety, and maintainability:
 
-## React Compiler
+* **React (v19)** - Frontend component-based library for building user interfaces.
+* **Vite** - Lightning-fast frontend build tool and development server.
+* **TypeScript** - Strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+* **Vanilla CSS & CSS Modules** - For flexible, scoped, and highly customizable UI styling without heavy framework overhead.
+* **Recharts** - A composable charting library built on React components for rendering dynamic financial data and insights.
+* **Lucide React** - Beautiful, consistent icon pack used throughout the application.
+* **Netlify** - Configured for quick and seamless static deployment via `netlify.toml`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ Installation
 
-## Expanding the ESLint configuration
+To set up this project locally on your machine, follow these steps:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/KurugoduSushma/finance-dashboard.git
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. **Navigate to the project directory:**
+   ```bash
+   cd finance-dashboard
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. **Install the dependencies:**
+   Make sure you have Node.js installed, then run:
+   ```bash
+   npm install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 How to Run Locally
+
+Once the installations are complete, you can start the development server:
+
+1. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+2. **View in the browser:**
+   Open your browser and navigate to `http://localhost:5173` (or the port specified in your terminal) to view the application live.
+
+## 📦 Building for Production
+
+To create a production-ready build for deployment:
+
+```bash
+npm run build
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+The output will be placed in the `dist` folder, ready to be hosted on any static web hosting service like Netlify, Vercel, or GitHub Pages.
